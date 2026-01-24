@@ -7,7 +7,6 @@ const FluidBackground = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    // --- 配置：多巴胺丝滑版 ---
     const config = {
       SIM_RESOLUTION: 256,
       DYE_RESOLUTION: 1024,
@@ -27,7 +26,6 @@ const FluidBackground = () => {
 
     if (!ext) return;
 
-    // --- Shaders (保持不变) ---
     const baseVertexShader = `
       attribute vec2 aPosition;
       varying vec2 vUv;
@@ -360,11 +358,10 @@ const FluidBackground = () => {
     };
   }, []);
 
-  // 【关键修改】fixed 定位 + z-index -1，确保在最底层
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed top-0 left-0 w-full h-full -z-10" 
+      className="fixed top-0 left-0 w-full h-full z-0" 
     />
   );
 };
