@@ -1,6 +1,6 @@
 <div align="center">
   
-# **亦如既往，时刻前行，大有可为，是为“奇迹”**
+# **I believe, since I remember.**
 
 </div>
 
